@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import CounterGroupWithContext from './components/CounterGroupWithContext/CounterGroupWithContext';
+import CounterGroupWithoutContext from './components/CounterGroupWithoutContext/CounterGroupWithoutContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Grupo de componentes que não utiliza Context-API para compartilhar estado e comportamento</h2>
+      <CounterGroupWithoutContext />
+      <br/><br/>
+      <hr />
+      <br/><br/>
+      <h2>Grupo de componentes que utiliza Context-API para compartilhar estado e comportamento</h2>
+      <CounterGroupWithContext />      
+    </>
   );
 }
 
